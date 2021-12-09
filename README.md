@@ -1,15 +1,15 @@
 # js-tasks
 
-## Task 2
+## Task 3
 
-1.  ### context.
+1.  ### setInterval.
 
-        fix code and bind context:
+        change object every 5 seconds after pushing button:
 
-    [solution](https://codepen.io/PapokMIkita/pen/OJxXwjJ)</br>
+    [solution](https://codepen.io/PapokMIkita/pen/LYzZoER?editors=1011)</br>
 
-2.  ### Filter polyfill.
+2.  ### Two inputs.
 
-        implement call,bind,apply methods:
+        add into second input value from first input in 1 second after stop typing:
 
-    [solution](https://codepen.io/PapokMIkita/pen/RwLRBjm?editors=0012)</br>
+    [solution](https://codepen.io/PapokMIkita/pen/yLzJWYr?editors=1111)</br>
