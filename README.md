@@ -26,16 +26,3 @@
 
     [solution](https://codepen.io/PapokMIkita/pen/eYGzrwq)
 
-## Task 2
-
-1.  ### Context
-
-        fix code and bind context:
-
-    [solution](https://codepen.io/PapokMIkita/pen/OJxXwjJ?editors=0011)
-
-2.  ### bind, call, apply
-
-        fix code, create class instance and bind context:
-
-    [solution](https://codepen.io/PapokMIkita/pen/RwLRBjm?editors=0012)
