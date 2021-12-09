@@ -21,6 +21,21 @@
     [solution](https://codepen.io/PapokMIkita/pen/ZEXOoPN?editors=0011)
 
 4.  ### Unique elements of array
+
         find uniq element in array:
-        
+
     [solution](https://codepen.io/PapokMIkita/pen/eYGzrwq)
+
+## Task 2
+
+1.  ### Context
+
+        fix code and bind context:
+
+    [solution](https://codepen.io/PapokMIkita/pen/OJxXwjJ?editors=0011)
+
+2.  ### bind, call, apply
+
+        fix code, create class instance and bind context:
+
+    [solution](https://codepen.io/PapokMIkita/pen/RwLRBjm?editors=0012)
