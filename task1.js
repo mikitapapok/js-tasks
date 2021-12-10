@@ -32,30 +32,6 @@ var notes = [
     access: [],
   },
 ]
-function getUnique(array) {
-  var a = 0
-  var uniq = false
-  for (var i = 0; i <= array.length - 1; i++) {
-    for (var j = 0; j < array.length; j++) {
-      if (i === j) continue
-      if (array[j] !== array[i]) {
-        uniq = true
-        continue
-      } else {
-        uniq = false
-        break
-      }
-    }
-    if (uniq === true) {
-      a = array[i]
-    }
-  }
-  return a
-}
-
-var testArray = [1, 1, 1, 2, 2, 3, 4, 4, 5, 5, 5, 5]
-var uniqueElement = getUnique(testArray)
-console.log(uniqueElement)
 
 Array.prototype.myMap = function (callback) {
   var resultArr = []
@@ -77,14 +53,19 @@ Array.prototype.myFilter = function (callback) {
   }
   return result
 }
+
 Array.prototype.myReduce = function (callback, container) {
-  var acc = container
-  if (this.length) {
-    for (var i = 0; i < this.length; i++) {
-      acc = callback(acc, this[i], i, this)
-    }
-    return acc
+  var acc
+  if (typeof container !== 'undefined') {
+    acc = container
+  } else {
+    acc = this[0]
   }
+  console.log(acc)
+  for (var i = 0; i < this.length; i++) {
+    acc = callback(acc, this[i], i, this)
+  }
+
   return acc
 }
 
@@ -92,7 +73,10 @@ var firstReult = notes.myMap((element) => {
   return { id: element.id, title: element.title }
 })
 var secondResult = notes.myFilter((e) => e.isMarked === true)
-var thirdResult = notes.myReduce((sum, element) => sum + element.pagesCount, 0)
+var thirdResult = notes.myReduce(
+  (accumulator, element) => accumulator + element.pagesCount,
+  0,
+)
 
 console.log(firstReult)
 console.log(secondResult)

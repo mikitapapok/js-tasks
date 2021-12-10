@@ -20,9 +20,3 @@
 
     [solution](https://codepen.io/PapokMIkita/pen/ZEXOoPN?editors=0011)
 
-4.  ### Unique elements of array
-
-        find uniq element in array:
-
-    [solution](https://codepen.io/PapokMIkita/pen/eYGzrwq)
-
