@@ -1,7 +1,4 @@
 const taskOneButton = document.getElementsByClassName('task-one-button')[0]
-// const firstInput = document.querySelector('#first-input')
-// const secondInput = document.querySelector('#second-input')
-
 const downloads = [
   {
     id: 1,
@@ -36,21 +33,13 @@ function changeItemProperty() {
     console.log('Check started')
     const filtered = downloads.filter((e) => e.status === 'Pending')
     if (filtered.length) {
-      for (let i = 0; i < downloads.length; i++) {
-        if (downloads[i].status === 'Pending') {
-          change(i)
-          break
-        }
-      }
+      const statusToCHange = downloads.find((e) => e.status === 'Pending')
+      statusToCHange.status = 'Done'
     } else {
       killInterval()
     }
   }
-  function change(index) {
-    downloads[index].status = 'Done'
-  }
-
-  function killInterval() {
+  const killInterval = () => {
     clearInterval(currentInterval)
   }
 }
@@ -59,7 +48,7 @@ taskOneButton.addEventListener('click', () => {
   setTimeout(changeItemProperty, 3000)
 })
 
-//Task 3-b
+// Task 3-b
 const firstInput = document.querySelector('#first-input')
 const secondInput = document.querySelector('#second-input')
 let timeOutForInput
