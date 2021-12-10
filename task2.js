@@ -6,9 +6,11 @@ function testThis(y) {
 testThis(100)
 const boundFunction = testThis.bind(context)
 console.log(boundFunction(100))
-//task 2
-function Robot(name) {
-  this.name = name
+// task 2
+class Robot{
+  constructor(name){
+    this.name=name
+  }
 }
 
 function add(op1, op2) {

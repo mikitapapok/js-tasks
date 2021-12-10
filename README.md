@@ -12,4 +12,4 @@
 
         implement call,bind,apply methods:
 
-    [solution](https://codepen.io/PapokMIkita/pen/RwLRBjm?editors=0012)</br>
+    [solution](https://codepen.io/PapokMIkita/pen/RwLRBjm?editors=1111)</br>
