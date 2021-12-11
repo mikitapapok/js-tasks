@@ -54,18 +54,31 @@ Array.prototype.myFilter = function (callback) {
   return result
 }
 
-Array.prototype.myReduce = function (callback, container) {
+Array.prototype.myReduce = function (callback) {
+  if (this == null) {
+    throw new TypeError('Array.prototype.reduce called on null or undefined')
+  }
+  if (typeof callback !== 'function') {
+    throw new TypeError(callback + ' is not a function')
+  }
   var acc
-  if (typeof container !== 'undefined') {
-    acc = container
+  var i = 0
+  if (arguments.length >= 2) {
+    acc = arguments[1]
   } else {
-    acc = this[0]
+    while (i < this.length && !(i in this)) {
+      i++
+    }
+    if (i >= this.length) {
+      throw new TypeError('Reduce of empty array with no initial value')
+    }
+    acc = this[i++]
   }
-  console.log(acc)
-  for (var i = 0; i < this.length; i++) {
-    acc = callback(acc, this[i], i, this)
+  for (; i < this.length; i++) {
+    if (i in this) {
+      acc = callback(acc, this[i], i, this)
+    }
   }
-
   return acc
 }
 
