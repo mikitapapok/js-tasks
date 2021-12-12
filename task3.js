@@ -31,10 +31,9 @@ function changeItemProperty() {
   const currentInterval = setInterval(main, 5000)
   function main() {
     console.log('Check started')
-    const filtered = downloads.filter((e) => e.status === 'Pending')
-    if (filtered.length) {
-      const statusToCHange = downloads.find((e) => e.status === 'Pending')
-      statusToCHange.status = 'Done'
+    const filtered = downloads.find((e) => e.status === 'Pending')
+    if (filtered) {
+      filtered.status = 'Done'
     } else {
       killInterval()
     }
